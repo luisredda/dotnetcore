@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0.102-1-buster-slim
 
-# Configure man dist and upgrade packages.
+# Configure man dist and upgrade packages..
 RUN mkdir -p /usr/share/man/man1mkdir -p /usr/share/man/man1
 RUN apt-get update && apt-get -y dist-upgrade
 
