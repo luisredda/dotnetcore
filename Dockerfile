@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0.102-1-buster-slim
 
-# Configure man dist and upgrade packages..
+# Configure man dist and upgrade packages.
 RUN mkdir -p /usr/share/man/man1mkdir -p /usr/share/man/man1
 RUN apt-get update && apt-get -y dist-upgrade
 
@@ -35,4 +35,5 @@ RUN apt-get clean \
 ENV PATH="${PATH}:/root/.dotnet/tools"
 ENV LC_ALL="pt-BR.UTF-8"
 ENV LANG="pt-BR.UTF-8"
-ENV LANGUAGE
+ENV LANGUAGE="pt-BR.UTF-8"
+RUN echo "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/" >> /etc/enviroment
