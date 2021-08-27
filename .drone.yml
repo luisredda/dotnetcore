@@ -1,0 +1,13 @@
+kind: pipeline
+name: default
+
+steps:
+- name: publish
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: u_docker
+    password: 
+      from_secret: p_docker
+    repo: luisredda/dotnetsdk
+    auto_tag: true
